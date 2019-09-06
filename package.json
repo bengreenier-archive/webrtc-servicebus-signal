@@ -1,0 +1,44 @@
+{
+  "name": "webrtc-servicebus-signal",
+  "version": "1.0.0-alpha",
+  "description": "WebRTC signaling implemented over Azure Service Bus",
+  "main": "dist/lib/index.js",
+  "scripts": {
+    "prepublishOnly": "npm run lint && npm test && npm run build",
+    "test": "jest",
+    "lint": "eslint **/*.ts",
+    "build": "tsc",
+    "start": "node dist/examples/index.js"
+  },
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "keywords": [
+    "webrtc",
+    "service",
+    "bus",
+    "amqp"
+  ],
+  "author": "Ben Greenier",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/uuid": "^3.4.5",
+    "@typescript-eslint/eslint-plugin": "^2.1.0",
+    "@typescript-eslint/parser": "^2.1.0",
+    "eslint": "^6.3.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.9.0",
+    "prettier": "^1.18.2",
+    "ts-jest": "^24.0.2",
+    "typescript": "3.5.x"
+  },
+  "dependencies": {
+    "@azure/service-bus": "^1.0.3",
+    "strict-event-emitter-types": "^2.0.0",
+    "uuid": "^3.3.3"
+  }
+}
