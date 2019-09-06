@@ -1,5 +1,7 @@
 # webrtc-servicebus-signal
 
+WebRTC signaling implemented over Azure Service Bus 📶
+
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal)
 
 ![project logo](./.github/logo.png)
