@@ -1,5 +1,6 @@
 # Manual rules
 dist/
+bin/
 # End Manual rules
 
 # Created by https://www.gitignore.io/api/node
