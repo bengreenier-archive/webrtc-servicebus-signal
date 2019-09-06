@@ -60,7 +60,7 @@ npm start
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal)
 
-To simplify cases when one might simply want to run our examples without needing to build the source, we provide binary releases for Windows, Mac, and Linux on the [Releases Page](https://github.com/bengreenier/webrtc-servicebus-signal/releases/latest).
+To simplify cases when one might simply want to run the examples without needing to build the source,binary releases are provided for Windows, Mac, and Linux on the [Releases Page](https://github.com/bengreenier/webrtc-servicebus-signal/releases/latest).
 
 ## Contributing
 

@@ -1,13 +1,15 @@
 {
   "name": "webrtc-servicebus-signal",
-  "version": "1.0.0-alpha",
+  "version": "1.0.1-alpha",
   "description": "WebRTC signaling implemented over Azure Service Bus",
   "main": "dist/lib/index.js",
+  "bin": "dist/examples/index.js",
   "scripts": {
     "prepublishOnly": "npm run lint && npm test && npm run build",
     "test": "jest",
     "lint": "eslint **/*.ts",
     "build": "tsc",
+    "dist": "npm run build && pkg --out-path bin .",
     "start": "node dist/examples/index.js"
   },
   "jest": {
@@ -32,6 +34,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.9.0",
+    "pkg": "^4.4.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
     "typescript": "3.5.x"
