@@ -1,4 +1,5 @@
 {
+  "so-angry": "at github actions right now",
   "name": "webrtc-servicebus-signal",
   "version": "1.0.0-alpha",
   "description": "WebRTC signaling implemented over Azure Service Bus",
