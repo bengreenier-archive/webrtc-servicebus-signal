@@ -6,13 +6,19 @@
   "bin": "dist/examples/index.js",
   "scripts": {
     "prepublishOnly": "npm run lint && npm test && npm run build",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint **/*.ts",
     "build": "tsc",
     "dist": "npm run build && pkg --out-path bin .",
     "start": "node dist/examples/index.js"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "**/src/**/*.ts"
+    ],
+    "coverageReporters": [
+      "cobertura"
+    ],
     "preset": "ts-jest"
   },
   "keywords": [
