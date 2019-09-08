@@ -1,1 +1,3 @@
-console.log('coming soon')
+import manyTalkers from './many-talkers'
+
+manyTalkers()
