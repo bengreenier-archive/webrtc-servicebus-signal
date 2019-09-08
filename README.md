@@ -2,7 +2,7 @@
 
 WebRTC signaling implemented over Azure Service Bus 📶
 
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal?include_prereleases)
 
 ![project logo](./.github/logo.png)
 
@@ -58,7 +58,7 @@ npm start
 
 ### Binary Releases
 
-![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal)
+![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/bengreenier/webrtc-servicebus-signal?include_prereleases)
 
 To simplify cases when one might simply want to run the examples without needing to build the source,binary releases are provided for Windows, Mac, and Linux on the [Releases Page](https://github.com/bengreenier/webrtc-servicebus-signal/releases/latest).
 
