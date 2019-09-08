@@ -1,7 +1,7 @@
-name: PR CI
+name: Continuous Deployment
 
 on:
-  pull_request:
+  push:
     branches:
     - master
 
@@ -20,11 +20,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
+    - name: npm install, dist
       run: |
         npm install
-        npm run lint
-        npm test
-        npm run build
+        npm run dist
       env:
         CI: true
