@@ -16,6 +16,12 @@ import SymmetricBus from '../lib/symmetric-bus'
 export default async (): Promise<void> => {
   const res = await inquirer.prompt([
     {
+      type: 'confirm',
+      message:
+        "Hello - This example will connect many talkers to ServiceBus to help to illustrate scale limits. However, before running you'll need to create a Service Bus instance in the Azure Portal. Please do that now. Inside the Service Bus you need two queues. One named 'announce' with the default settings, and one named 'session' with 'Enable sessions' ticked. Then go to Shared Access Keys, RootManageSharedAccessKey, and copy the 'Primary connection string' (you'll be prompted for it in a moment).",
+      name: 'entryMessage',
+    },
+    {
       type: 'input',
       name: 'connStr',
       message: 'Azure Service Bus Connection String',
@@ -41,6 +47,20 @@ export default async (): Promise<void> => {
   const serverMessage = "hello i'm a server"
   const clientMessage = "hello i'm a client"
 
+  const nodeCount = {
+    client: 0,
+    server: 0,
+  }
+
+  const interval = setInterval(() => {
+    // eslint-disable-next-line no-console
+    console.log(`Clients: ${nodeCount.client}\nServers: ${nodeCount.server}`)
+
+    if (nodeCount.client + nodeCount.server === res.talkers) {
+      clearInterval(interval)
+    }
+  }, 1000)
+
   for (let i = 0; i < half; i += 1) {
     // allocate server
     const server = new SymmetricBus({
@@ -58,6 +78,7 @@ export default async (): Promise<void> => {
     })
 
     server.on('ready', () => {
+      nodeCount.server += 1
       server.send(clientMessage)
     })
     server.on('message', data => {
@@ -82,6 +103,7 @@ export default async (): Promise<void> => {
     })
 
     client.on('ready', () => {
+      nodeCount.client += 1
       client.send(serverMessage)
     })
     client.on('message', data => {
