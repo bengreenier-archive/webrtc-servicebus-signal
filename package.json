@@ -30,6 +30,7 @@
   "author": "Ben Greenier",
   "license": "MIT",
   "devDependencies": {
+    "@types/inquirer": "^6.5.0",
     "@types/jest": "^24.0.18",
     "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^2.1.0",
@@ -40,6 +41,7 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "jest": "^24.9.0",
+    "jest-create-mock-instance": "^1.1.0",
     "pkg": "^4.4.0",
     "prettier": "^1.18.2",
     "ts-jest": "^24.0.2",
@@ -47,6 +49,8 @@
   },
   "dependencies": {
     "@azure/service-bus": "^1.0.3",
+    "inquirer": "^7.0.0",
+    "prompt": "^1.0.0",
     "strict-event-emitter-types": "^2.0.0",
     "uuid": "^3.3.3"
   }
